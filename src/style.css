@@ -28,6 +28,25 @@ body{
     border-radius:10px 10px  0 0 ;
     background:black;
 }
+/*给鼻子添加动画*/
+@keyframes wave{
+    0%{
+        transform: rotate(0deg);
+    }
+    33%{
+        transform: rotate(8deg);
+    }
+    66%{
+        transform: rotate(-8deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+.nose:hover{
+    transform-origin:center bottom;
+    animation: wave 300ms  infinite linear;
+}
 .eye{
     border:2px solid #000;
     width:64px;
@@ -87,10 +106,10 @@ body{
     transform: rotate(-15deg) translateX(-53px);
   }
   .mouth .up .lip.right{
-    /* border:1px solid green; */
     border-radius: 0 0 50px 0px;
     transform: rotate(15deg) translateX(53px);
   }
+
   .mouth .up .lip::before{
     content: '';
     display: block;
